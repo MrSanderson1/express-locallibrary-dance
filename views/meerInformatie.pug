@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        title meer informatie
+        link(rel='stylesheet' href='/stylesheets/style.css')
+    body(style="padding-top: 90px;")
+        block content
+            // Navbar (sit on top)
+            include navigationMeerinformatie
+            // Header
+            header#home.w3-display-container.w3-content.w3-wide(style='max-width:1500px;')
+            // Page content
+            .w3-content.w3-padding(style='max-width:1564px')
+                // modern jazz
+                include modernJazz
+                //hiphop
+                include hiphop
+                //koppeldansen
+                include koppeldansen
+                //ballet
+                include ballet
+                //contact
+                include contact
+                //end of page content

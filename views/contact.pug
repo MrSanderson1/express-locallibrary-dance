@@ -1,0 +1,39 @@
+block content
+#contact.w3-container.w3-padding-16
+  .w3-row-padding.w3-grayscale
+    h3.w3-border-bottom.w3-border-light-grey Contact
+    h4 Adres
+    p
+      | WijngaardVeld 6, 9300 Aalst
+    h4 Telefoon
+    p  ++32 (0) 53/70 58 64
+    h4 openingsuren
+    p
+      | Dinsdag:      18u30 tot 23u00
+      br
+      | Woensdag:     16u00 tot 23u00
+      br
+      | Zaterdag:     12u30 tot 21u00
+// Image of location/map
+.w3-container
+  .w3-row-padding.w3-grayscale
+    .w3-col.l5New.m6.w3-margin-bottom
+      h4 Vind ons
+      .map-responsive
+        .map-responsive-iframe
+          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2513.322727450836!2d4.038200315441139!3d50.954737158781214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c397efcbd16f4d%3A0x2880d5fbf35d12f4!2sMove!5e0!3m2!1snl!2sbe!4v1606843884670!5m2!1snl!2sbe'
+            width='550' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0' sandbox='allow-scripts')
+    .w3-col.l3New.m6.w3-margin-bottom
+      //er werd een nieuwe W3-col.l3New gedefinieerd zodat de layout van deze pagina mooi was
+      h4 facebook pagina
+      .resp-container
+        .responsive-iframe
+          iframe(src='https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMoveDancecenter&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId'
+            width='360' height='450' style='border:none;overflow:hidden' scrolling='yes' frameborder='0' allowfullscreen='true' allow='autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share')
+              //sandbox voor facebook geeft niet de gewenste uitkomst
+    .w3-col.l3New.m6.w3-margin-bottom
+      h4 Website Move
+      .resp-container
+        .responsive-iframe
+          iframe(src='http://www.move-dancecenter.com/center/' name='' title='move website'
+            width='360' height='450' style='border:none;overflow:hidden' scrolling='yes' frameborder='0' allowfullscreen='true' allow='autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share' sandbox='allow-scriptss')

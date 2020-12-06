@@ -1,0 +1,17 @@
+doctype html
+html
+    head
+        title Inschrijvingsformulier
+        link(rel='stylesheet' href='/stylesheets/style.css')
+        script(src='/javascripts/jquery.js')
+        script(src='/javascripts/inschrijvingsFormulier.js')
+    body(style="padding-top: 90px;")
+        block content
+            // Navbar (sit on top)
+            include navigationInschrijvingsFormulier
+            // Header
+            header#home.w3-display-container.w3-content.w3-wide(style='max-width:1500px;')
+            // Page content
+            h3.w3-border-bottom.w3-border-light-grey.w3-padding-16.w3-justify.w3-center Inschrijvingsformulier
+            include gegevens
+            include formzenden

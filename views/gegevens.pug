@@ -1,0 +1,40 @@
+block content
+#over.w3-container.w3-padding-32
+  .w3-justify
+    //form(method='post', action='/change')
+    table(border='0', class="centertable")
+      tr
+        td Voornaam: 
+        td: input(type="text", name="title", id="inputNaam", class="inputclass")
+        td Achternaam: 
+        td(colspan="6"): input(type="text", id="inputANaam", name="title", class="inputclass", style="width:300px;")
+      tr
+        td Leeftijd:
+        td:  input(type="number", id="inputL", name="title" class="inputclass")
+        td Geslacht: 
+        td(style="padding-left:25px;"): input(type="radio", name="gesl", id="geslachtM")
+        td: label(for='geslachtM') Man
+        td: input(type="radio", name="gesl", id="geslachtV")
+        td: label(for='geslachtV') Vrouw
+        td: input(type="radio", name="gesl", id="geslachtA")
+        td(style="padding-right:170px;"): label(for='geslachtA') Ander
+      tr
+        td Email:
+        td(colspan="8"): input(type="text", id="inputMail", name="Email" class="inputclass" style="width:736px")
+       
+    .w3-justify
+        table(border='0', class="centertable", style="margin-top:50px;")
+            tr
+                td Selecteer je dansstijl:
+                td: select#dansstijlDropdown.select.form-control.input-lg(style="width:350px;font-size: 16px;padding-top:3px;padding-bottom:3px;padding-left:5px;" onchange="dansstijlOnChangeEvent()")
+                      option(value='0') -- Selecteer je dansstijl --
+                      option(value='1') Modern Jazz
+                      option(value='2') Hiphop
+                      option(value='3') Koppeldansen
+                      option(value='4') Ballet
+            tr
+                td Selecteer je les:
+                td: select#lesDropdown.select.form-control.input-lg(style="width:550px;font-size: 16px;padding-top:3px;padding-bottom:3px;padding-left:5px;" onchange="lesOnChangeEvent()")
+                          option(value='0') -- Selecteer je les --
+            tr
+                td(id="aantalPersonenInLes", colspan="4", style="color: #35af35;")

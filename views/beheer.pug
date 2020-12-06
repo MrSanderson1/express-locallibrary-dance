@@ -1,0 +1,22 @@
+//Name of the file : tables.pug
+table(style='width:100%', border='1')
+  tr
+    th ID
+    th voornaam
+    th achternaam
+    th leeftijd
+    th geslacht
+    th mailadres
+    th dansstijl
+    th lesgroep
+  each Inschrijving in  n
+    tr
+      td= Inschrijving._id
+      td= Inschrijving.voornaam
+      td= Inschrijving.achternaam
+      td= Inschrijving.leeftijd
+      td= Inschrijving.geslacht
+      td= Inschrijving.mailadres
+      td= Inschrijving.dansstijl
+      td= Inschrijving.lesgroep
+

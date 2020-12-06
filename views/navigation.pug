@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  nav.top
+    .w3-bar.w3-white.w3-wide.w3-padding.w3-card(class="navigationClass")
+      a.w3-bar-item.w3-button(href='#home')
+        b Move
+        |  Dance-center
+      // Float links to the right. Hide them on small screens
+      .w3-right.w3-hide-small
+        a.w3-bar_item.w3-button(href='#lessen') Lessen
+        a.w3-bar-item.w3-button(href='#over') Over
+        a.w3-bar-item.w3-button(href='#contact') Contact
+        
