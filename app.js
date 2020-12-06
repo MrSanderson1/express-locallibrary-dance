@@ -4,6 +4,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+
+
+var dev_db_url='mongodb+srv://SanderDeSutter:OW1g8KoMRsB72c61@cluster0.vm6gp.mongodb.net/DansScoolMove?retryWrites=true&w=majority';
+
+var mongoDB = process.env.MONGODB_URI || dev_db_url;
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var meerInformatieRouter = require('./routes/meerInformatie');
