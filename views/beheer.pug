@@ -1,22 +1,36 @@
 //Name of the file : tables.pug
-table(style='width:100%', border='1')
-  tr
-    th ID
-    th voornaam
-    th achternaam
-    th leeftijd
-    th geslacht
-    th mailadres
-    th dansstijl
-    th lesgroep
-  each Inschrijving in  n
-    tr
-      td= Inschrijving._id
-      td= Inschrijving.voornaam
-      td= Inschrijving.achternaam
-      td= Inschrijving.leeftijd
-      td= Inschrijving.geslacht
-      td= Inschrijving.mailadres
-      td= Inschrijving.dansstijl
-      td= Inschrijving.lesgroep
+doctype html
+html
+    head
+        title beheer
+        link(rel='stylesheet' href='/stylesheets/style.css')
+    body
+        block content
+          .w3-content.w3-padding(style='max-width:1564px')
+            h1.w3-xxlarge.w3-text-white
+              span.w3-padding.w3-black.w3-opacity-min
+                b Move
+              span.w3-hide-small.w3-text-dark-grey Dancecenter
+          .w3-table.w3-bordered.w3-striped.w3-codespan.w3-text-black
+
+                table(style='width:100%', border='1')
+                  tr
+                    th ID
+                    th voornaam
+                    th achternaam
+                    th leeftijd
+                    th geslacht
+                    th mailadres
+                    th dansstijl
+                    th lesgroep
+                  each Inschrijving in  n
+                    tr
+                      td= Inschrijving._id
+                      td= Inschrijving.voornaam
+                      td= Inschrijving.achternaam
+                      td= Inschrijving.leeftijd
+                      td= Inschrijving.geslacht
+                      td= Inschrijving.mailadres
+                      td= Inschrijving.dansstijl
+                      td= Inschrijving.lesgroep
 
