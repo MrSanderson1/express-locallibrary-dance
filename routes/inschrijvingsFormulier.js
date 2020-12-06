@@ -19,7 +19,7 @@ router.get('/getAantalPerLes', (req, res) => {
 	   if(err) throw err;
         
 	   let db = client.db('DansScoolMove');
-	   db.collection('Inschrijvingen').find({ "lesgroep": req.query["lesgroep"],  "dansstijl": req.query["dansstijl"] } ).toArray(function(err, result){
+	   await db.collection('Inschrijvingen').find({ "lesgroep": req.query["lesgroep"],  "dansstijl": req.query["dansstijl"] } ).toArray(function(err, result){
 		 if(err) throw err;
               
 		 res.send(result.length.toString());
@@ -37,7 +37,7 @@ router.post('/schrijfIn', function(req, res) {
 	   if(err) throw err;
 	   
 	   let db = client.db('DansScoolMove');
-        db.collection('Inschrijvingen').insert(req.body);
+        await db.collection('Inschrijvingen').insert(req.body);
         res.send('OK');
 	});
 });
