@@ -34,6 +34,10 @@ app.use('/meerInformatie', meerInformatieRouter);
 app.use('/beheer', beheerRouter);
 app.use('/inschrijvingsFormulier', schrijfInRouter);
 
+
+MongoClient.connect(mongoDB, function(err){
+    if(err) throw err;
+});
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
