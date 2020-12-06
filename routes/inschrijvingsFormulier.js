@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
 router.get('/getAantalPerLes', (req, res) => {
 	//for mongodb version 3.0 and up
 	const MongoClient = require('mongodb').MongoClient;
-	await MongoClient.connect(mongoDB, function(err, client){
+	MongoClient.connect(mongoDB, function(err, client){
 	   if(err) throw err;
         
 	   let db = client.db('DansScoolMove');
@@ -33,7 +33,7 @@ router.post('/schrijfIn', function(req, res) {
     console.log(req.body);
     req.body["betaald"] = false;
     const MongoClient = require('mongodb').MongoClient;
-	await MongoClient.connect(mongoDB, function(err, client){
+        MongoClient.connect(mongoDB, function(err, client){
 	   if(err) throw err;
 	   
 	   let db = client.db('DansScoolMove');
