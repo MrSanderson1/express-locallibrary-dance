@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
 router.get('/getAantalPerLes', (req, res) => {
 	//for mongodb version 3.0 and up
 	const MongoClient = require('mongodb').MongoClient;
-	MongoClient.connect('mongodb+srv://SanderDeSutter:OW1g8KoMRsB72c61@cluster0.vm6gp.mongodb.net/DansScoolMove?retryWrites=true&w=majority', function(err, client){
+	MongoClient.connect(mongoDB, function(err, client){
 	   if(err) throw err;
         
 	   let db = client.db('DansScoolMove');
@@ -33,7 +33,7 @@ router.post('/schrijfIn', function(req, res) {
     console.log(req.body);
     req.body["betaald"] = false;
     const MongoClient = require('mongodb').MongoClient;
-	MongoClient.connect('mongodb+srv://SanderDeSutter:OW1g8KoMRsB72c61@cluster0.vm6gp.mongodb.net/DansScoolMove?retryWrites=true&w=majority', function(err, client){
+	MongoClient.connect(mongoDB, function(err, client){
 	   if(err) throw err;
 	   
 	   let db = client.db('DansScoolMove');
