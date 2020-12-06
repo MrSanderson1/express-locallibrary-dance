@@ -10,7 +10,7 @@ var dev_db_url='mongodb+srv://SanderDeSutter:OW1g8KoMRsB72c61@cluster0.vm6gp.mon
 
 var mongoDB = process.env.MONGODB_URI || dev_db_url;
 
-var client = new MongoClient(mongoDB);
+//var client = new MongoClient(mongoDB);
 
 
 
