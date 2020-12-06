@@ -9,14 +9,9 @@ var logger = require('morgan');
 var dev_db_url='mongodb+srv://SanderDeSutter:OW1g8KoMRsB72c61@cluster0.vm6gp.mongodb.net/DansScoolMove?retryWrites=true&w=majority';
 
 var mongoDB = process.env.MONGODB_URI || dev_db_url;
-var MongoClient = require('mongodb').MongoClient;
+
 var client = new MongoClient(mongoDB);
-try{
-    client.connect();
-    
-}catch(e){
-    console.error(e);
-}
+
 
 
 var indexRouter = require('./routes/index');
