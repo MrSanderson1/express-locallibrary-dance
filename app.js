@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 
-var MongoClient = require('mongodb').MongoClient;
+
 var dev_db_url='mongodb+srv://SanderDeSutter:OW1g8KoMRsB72c61@cluster0.vm6gp.mongodb.net/DansScoolMove?retryWrites=true&w=majority';
 
 var mongoDB = process.env.MONGODB_URI || dev_db_url;
@@ -35,18 +35,9 @@ app.use('/beheer', beheerRouter);
 app.use('/inschrijvingsFormulier', schrijfInRouter);
 
 
-const client = new MongoClient(mongoDB);
- 
-    try {
-        // Connect to the MongoDB cluster
-        await client.connect();
- 
-        // Make the appropriate DB calls
-        await  listDatabases(client);
- 
-    } catch (e) {
-        console.error(e);
-    }
+MongoClient.connect(dev_db_url, function(err){
+    if(err) throw err;
+})
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
