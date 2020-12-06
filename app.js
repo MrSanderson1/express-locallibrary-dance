@@ -35,9 +35,18 @@ app.use('/beheer', beheerRouter);
 app.use('/inschrijvingsFormulier', schrijfInRouter);
 
 
-MongoClient.connect(mongoDB, function(err){
-    if(err) throw err;
-});
+const client = new MongoClient(mongoDB);
+ 
+    try {
+        // Connect to the MongoDB cluster
+        await client.connect();
+ 
+        // Make the appropriate DB calls
+        await  listDatabases(client);
+ 
+    } catch (e) {
+        console.error(e);
+    }
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
